@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ExpenseManager</string>
+    <string name="error">Mật khẩu tối thiểu có 6 ký tự trong đó ít nhất \n1 chữ Hoa,1 chữ thường, 1 số, 1 ký tự thuộc
+dãy !@#$%^*()_= </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_transaction_adding">Thêm giao dịch</string>
+    <string name="title_input">Nhập</string>
+    <string name="text_transaction_name">Tên vật mua</string>
+    <string name="title_select">Chọn</string>
+    <string name="title_transaction_price">Giá vật mua (Đồng)</string>
+    <string name="wallet_name">Tên ví</string>
+    <string name="title_empty">Đang trống</string>
+    <string name="title_category">Danh mục</string>
+    <string name="title_event">Sự kiện</string>
+    <string name="title_transaction_date">Ngày</string>
+    <string name="title_partner">Đối tác</string>
+    <string name="title_repeat_count">Số lần lặp</string>
+    <string name="title_repeat_mode">Chế độ lặp</string>
+    <string name="title_repeat_time">Thời gian</string>
+
+    <string name="title_accept">Xác nhận</string>
+    <string name="list_event">Danh sách Sự kiện</string>
+    <string name="title_balance">Tiền còn lại</string>
+    <string name="title_list_category">Danh sách Danh mục</string>
+    <string name="title_list_partners">Danh sách Đối tác</string>
+    <string name="title_input_name">Nhập tên</string>
+    <string name="title_contact_suggestion">Danh bạ gợi ý</string>
+    <string name="title_items_empty">Danh sách đang trống, nhấn vào nút phía dưới để thêm mới</string>
+    <string name="create_new">Thêm mới</string>
+    <string name="title_cancel">Huỷ bỏ</string>
+    <string name="error_empty">ĐANG TRỐNG</string>
+
+
+</resources>

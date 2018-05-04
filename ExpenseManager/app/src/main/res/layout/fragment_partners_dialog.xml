@@ -1,0 +1,71 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWindowBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ict.com.expensemanager.ui.transaction.EventsDialogFragment">
+
+
+    <TextView
+        android:id="@+id/text_title_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_list_partners"
+        style="@style/TextTitleDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/title_input_name"
+        style="@style/TextTitleContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_100"
+        android:layout_marginTop="@dimen/normal_100"
+        android:text="@string/title_input_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title_dialog"
+        />
+
+    <ict.com.expensemanager.ui.transaction.PartnerCompletionView
+        android:id="@+id/edit_text_partner_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normal_100"
+        android:layout_marginTop="@dimen/small_100"
+        android:hint="@string/title_input"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/title_input_name"
+        app:layout_constraintTop_toBottomOf="@+id/title_input_name" />
+
+
+    <Button
+        android:id="@+id/button_accept"
+        style="@style/ButtonDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/title_accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_cancel" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        style="@style/ButtonDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/normal_100"
+        android:text="Huỷ bỏ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

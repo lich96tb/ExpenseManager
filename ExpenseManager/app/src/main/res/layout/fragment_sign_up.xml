@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_background_sign_in">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/itsol" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Đăng ký"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/edtSignUpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/drawble_edit_text"
+                android:hint="Tên tài khoản"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/edtSignUpPassWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/drawble_edit_text"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/edtSignUpEnterThePassWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/drawble_edit_text"
+                android:hint="Nhập lại mật khẩu"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textStyle="italic"
+                android:id="@+id/txtSignUpError"
+                android:textColor="#e13030"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/error" />
+
+            <Button
+                android:id="@+id/btnSignUpSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:text="Đăng ký"
+                android:textColor="@color/textSign"/>
+
+            <TextView
+                android:textColor="@color/textSign"
+                android:id="@+id/txtSignUpSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_left_arrow"
+                android:text="Đăng nhập"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

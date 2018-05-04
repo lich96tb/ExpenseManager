@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWindowBackground"
+    tools:context="ict.com.expensemanager.ui.transaction.TransactionAddingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:contentDescription="No Image"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_title_toolbar"
+                style="@style/TextTitleToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_transaction_adding"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_save_data"
+                app:layout_constraintStart_toEndOf="@+id/button_back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/text_save_data"
+                style="@style/TextToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/normal_100"
+                android:text="Lưu"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_title_toolbar"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="@dimen/large_150"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/normal_125"
+            android:paddingEnd="@dimen/normal_100"
+            android:paddingStart="@dimen/normal_100"
+            android:paddingTop="@dimen/normal_100">
+
+            <TextView
+                android:id="@+id/text_title_input"
+                style="@style/TextTitleContentBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_50"
+                android:text="@string/title_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_input"
+                style="@style/CardViewLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_50"
+                android:layout_marginTop="@dimen/normal_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="@+id/text_title_input"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_input">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/image_transaction_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:src="@drawable/ic_info_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_name"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/text_transaction_name"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_transaction_name"
+                        app:layout_constraintStart_toEndOf="@+id/image_transaction_name"
+                        app:layout_constraintTop_toTopOf="@+id/image_transaction_name" />
+
+                    <android.support.design.widget.TextInputLayout
+
+                        android:id="@+id/text_input_layout_transaction_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_100"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/image_transaction_name"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_transaction_name">
+
+                        <EditText
+                            android:id="@+id/edit_text_transaction_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/title_input"
+                            android:labelFor="@id/edit_text_transaction_name"
+                            android:theme="@style/MyEditText" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/image_transaction_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:layout_marginTop="@dimen/small_100"
+                        android:src="@drawable/ic_price_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text_input_layout_transaction_name" />
+
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_price"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_transaction_price"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_transaction_price"
+                        app:layout_constraintStart_toEndOf="@+id/image_transaction_price"
+                        app:layout_constraintTop_toTopOf="@+id/image_transaction_price" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_layout_transaction_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_100"
+                        android:inputType="number"
+                        android:labelFor="@id/edit_text_transaction_price"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/image_transaction_price"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_transaction_price">
+
+                        <ict.com.expensemanager.ui.custom.AutoFormatEditText
+                            android:id="@+id/edit_text_transaction_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="@string/title_input"
+                            android:theme="@style/MyEditText" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--- Select Group   -->
+            <TextView
+                android:id="@+id/text_title_select"
+                style="@style/TextTitleContentBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_50"
+                android:layout_marginTop="@dimen/normal_100"
+                android:text="@string/title_select"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_input" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_select"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_50"
+                android:layout_marginStart="@dimen/small_50"
+                android:layout_marginTop="@dimen/normal_100"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_title_select">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/normal_150">
+
+                    <ImageView
+                        android:id="@+id/image_transaction_wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:src="@drawable/ic_wallet_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_wallet"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/wallet_name"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_transaction_wallet"
+                        app:layout_constraintStart_toEndOf="@+id/image_transaction_wallet"
+                        app:layout_constraintTop_toTopOf="@+id/image_transaction_wallet"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <Button
+                        android:id="@+id/button_select_wallet"
+                        style="@style/MySelectorButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_button_select"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:text="@string/title_empty"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_transaction_wallet" />
+
+                    <ImageView
+                        android:id="@+id/image_transaction_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:src="@drawable/ic_category_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button_select_wallet" />
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_category"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_category"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_transaction_category"
+                        app:layout_constraintStart_toEndOf="@+id/image_transaction_category"
+                        app:layout_constraintTop_toTopOf="@+id/image_transaction_category"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <Button
+                        android:id="@+id/button_select_category"
+                        style="@style/MySelectorButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_button_select"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:text="@string/title_empty"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image_transaction_category" />
+
+                    <ImageView
+                        android:id="@+id/image_transaction_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:src="@drawable/ic_event_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button_select_category" />
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_event"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_event"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_transaction_event"
+                        app:layout_constraintStart_toEndOf="@+id/image_transaction_event"
+                        app:layout_constraintTop_toTopOf="@+id/image_transaction_event"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <Button
+                        android:id="@+id/button_select_event"
+                        style="@style/MySelectorButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_button_select"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:text="@string/title_empty"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image_transaction_event" />
+
+                    <ImageView
+                        android:id="@+id/image_transaction_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:src="@drawable/ic_date_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button_select_event" />
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_date"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_transaction_date"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_transaction_date"
+                        app:layout_constraintStart_toEndOf="@+id/image_transaction_date"
+                        app:layout_constraintTop_toTopOf="@+id/image_transaction_date"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <Button
+                        android:id="@+id/button_select_date"
+                        style="@style/MySelectorButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_button_select"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:text="@string/title_empty"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image_transaction_date" />
+
+                    <ImageView
+                        android:id="@+id/image_transaction_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:src="@drawable/ic_partners_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button_select_date" />
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_partner"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_partner"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_transaction_partner"
+                        app:layout_constraintStart_toEndOf="@+id/image_transaction_partner"
+                        app:layout_constraintTop_toTopOf="@+id/image_transaction_partner"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <TextView
+                        android:id="@+id/text_select_partner"
+                        style="@style/MySelectorButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_button_select"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/title_empty"
+                        android:textAllCaps="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/image_transaction_partner"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_transaction_partner" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_repeat_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_50"
+                android:layout_marginStart="@dimen/small_50"
+                android:layout_marginTop="@dimen/normal_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_view_select">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/normal_125">
+
+                    <ImageView
+                        android:id="@+id/image_repeat_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:src="@drawable/ic_repeat_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_title_transaction_repeat"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_repeat_mode"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_repeat_mode"
+                        app:layout_constraintStart_toEndOf="@+id/image_repeat_mode"
+                        app:layout_constraintTop_toTopOf="@+id/image_repeat_mode"
+                        app:layout_constraintVertical_bias="0.5" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner_repeat_mode"
+                        android:layout_width="@dimen/width_button_select"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:background="@drawable/background_spinner"
+                        android:text="@string/title_empty"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/text_title_transaction_repeat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/text_title_transaction_repeat"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <View
+                        android:id="@+id/divider_repeat_mode"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_100"
+                        android:background="#757575"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/spinner_repeat_mode" />
+
+                    <ImageView
+                        android:id="@+id/image_repeat_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_175"
+                        android:src="@drawable/ic_repeat_count_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider_repeat_mode"
+
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="72dp" />
+
+                    <TextView
+                        android:id="@+id/text_title_repeat_count"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_repeat_count"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_repeat_count"
+                        app:layout_constraintStart_toEndOf="@+id/image_repeat_count"
+                        app:layout_constraintTop_toTopOf="@+id/image_repeat_count"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <Spinner
+                        android:id="@+id/spinner_repeat_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:background="@drawable/background_spinner"
+
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_title_repeat_count"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/text_title_repeat_count"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <EditText
+                        android:id="@+id/edit_text_repeat_count"
+
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_150"
+                        android:gravity="center_horizontal"
+                        android:inputType="number"
+                        android:text="2"
+                        android:theme="@style/MyEditText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_title_repeat_count" />
+
+                    <ImageView
+                        android:id="@+id/image_repeat_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_100"
+                        android:layout_marginTop="@dimen/normal_175"
+                        android:src="@drawable/ic_date_grey_24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_text_repeat_count" />
+
+                    <TextView
+                        android:id="@+id/text_title_repeat_count_date"
+                        style="@style/TextTitleContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_100"
+                        android:text="@string/title_repeat_time"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_repeat_date"
+                        app:layout_constraintStart_toEndOf="@+id/image_repeat_date"
+                        app:layout_constraintTop_toTopOf="@+id/image_repeat_date"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <Button
+                        android:id="@+id/button_select_repeat_date"
+                        style="@style/MySelectorButton"
+                        android:layout_width="@dimen/width_button_select"
+                        android:layout_height="@dimen/height_button_select"
+                        android:layout_marginEnd="@dimen/normal_100"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/small_100"
+                        android:text="@string/title_empty"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/text_title_repeat_count_date"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/text_title_repeat_count_date" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

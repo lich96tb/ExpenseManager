@@ -1,0 +1,146 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/normal_100"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/CardViewLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_event_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_grey_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/text_event_name"
+                style="@style/TextItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_100"
+                android:text="EventName"
+                app:layout_constraintBottom_toBottomOf="@+id/image_event_name"
+                app:layout_constraintStart_toEndOf="@+id/image_event_name"
+                app:layout_constraintTop_toTopOf="@+id/image_event_name"
+                />
+
+            <ImageView
+                android:id="@+id/image_estimate_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_100"
+                android:layout_marginStart="@dimen/normal_175"
+                android:src="@drawable/ic_price_grey_24dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_event_name"
+                app:layout_constraintStart_toStartOf="@+id/image_event_name"
+                app:layout_constraintTop_toBottomOf="@+id/image_event_name"
+                />
+
+            <TextView
+                android:id="@+id/title_estimate_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiền dự kiến"
+                android:layout_marginStart="@dimen/normal_100"
+                app:layout_constraintBottom_toBottomOf="@+id/image_estimate_money"
+                app:layout_constraintStart_toStartOf="@+id/text_event_name"
+                app:layout_constraintTop_toTopOf="@+id/image_estimate_money"
+                />
+
+            <TextView
+                android:id="@+id/text_estimate_money"
+                style="@style/TextPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_100"
+                android:text="200,000"
+                app:layout_constraintBaseline_toBaselineOf="@id/title_estimate_money"
+                app:layout_constraintStart_toEndOf="@+id/title_estimate_money"
+                />
+
+
+            <ImageView
+                android:id="@+id/image_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_100"
+                android:src="@drawable/ic_price_grey_24dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_estimate_money"
+                app:layout_constraintStart_toStartOf="@+id/image_estimate_money"
+                app:layout_constraintTop_toBottomOf="@+id/image_estimate_money"
+                />
+
+            <TextView
+                android:id="@+id/title_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_balance"
+                app:layout_constraintBottom_toBottomOf="@+id/image_balance"
+                app:layout_constraintEnd_toEndOf="@+id/title_estimate_money"
+                app:layout_constraintTop_toTopOf="@+id/image_balance"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/text_balance"
+                style="@style/TextPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_100"
+                android:text="50,000"
+                app:layout_constraintBaseline_toBaselineOf="@id/title_balance"
+                app:layout_constraintStart_toEndOf="@+id/title_balance"
+                />
+
+
+            <CheckBox
+                android:id="@+id/checkbox_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_50"
+                android:layout_marginEnd="@dimen/small_50"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/title_currency_expected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_50"
+                android:text="đ"
+                style="@style/TextPrice"
+                app:layout_constraintStart_toEndOf="@+id/text_estimate_money"
+                app:layout_constraintTop_toTopOf="@+id/text_estimate_money" />
+
+            <TextView
+                android:id="@+id/title_currency_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_50"
+                android:text="đ"
+                style="@style/TextPrice"
+                app:layout_constraintStart_toEndOf="@+id/text_balance"
+                app:layout_constraintTop_toTopOf="@+id/text_balance" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

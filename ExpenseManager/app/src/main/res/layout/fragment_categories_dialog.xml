@@ -1,0 +1,60 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWindowBackground"
+    tools:context="ict.com.expensemanager.ui.transaction.EventsDialogFragment">
+
+
+    <TextView
+        android:id="@+id/text_title_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_list_category"
+        style="@style/TextTitleDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_categories"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="@dimen/normal_100"
+        android:layout_marginStart="@dimen/normal_100"
+        android:layout_marginTop="@dimen/normal_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_title_dialog" />
+
+    <Button
+        android:id="@+id/button_accept"
+        style="@style/ButtonDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_100"
+        android:layout_marginEnd="@dimen/normal_125"
+        android:layout_marginTop="8dp"
+        android:text="@string/title_accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_categories" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        style="@style/ButtonDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_100"
+        android:layout_marginEnd="@dimen/normal_100"
+        android:layout_marginTop="8dp"
+        android:text="@string/title_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_categories" />
+
+
+
+</android.support.constraint.ConstraintLayout>

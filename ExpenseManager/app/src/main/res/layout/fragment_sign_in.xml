@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/drawable_background_sign_in"
+    tools:context=".MainActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/itsol" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="Đăng nhập"
+                android:textColor="@color/textSign"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/edtSignInName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/drawble_edit_text"
+                android:hint="Tên tài khoản"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/edtSignInPassWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/drawble_edit_text"
+                android:inputType="textPassword"
+                android:hint="Mật khẩu"
+                android:padding="12dp" />
+
+            <CheckBox
+                android:id="@+id/chkSignInAutoSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tự động đăng nhập"
+                android:textColor="@color/textSign"/>
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:text="Đăng nhập"
+                android:textColor="@color/textSign"/>
+
+            <TextView
+                android:id="@+id/txtSignInSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:text="Đăng ký"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="@color/textSign"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

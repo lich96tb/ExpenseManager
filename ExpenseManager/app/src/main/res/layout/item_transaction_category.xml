@@ -1,0 +1,56 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/normal_100"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/CardViewLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_category"
+                android:layout_width="@dimen/width_image_category"
+                android:layout_height="@dimen/height_image_category"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_category_name"
+                style="@style/TextItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_125"
+                android:text="Đồ uống"
+                app:layout_constraintBottom_toBottomOf="@+id/image_category"
+                app:layout_constraintStart_toEndOf="@+id/image_category"
+                app:layout_constraintTop_toTopOf="@+id/image_category"
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox_category_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="@+id/image_category"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image_category" />
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
